@@ -4,6 +4,7 @@ docker-compose run --rm app sh -c "django-admin.py startproject app ."
 docker-compose run --rm app sh -c "python manage.py startapp api"
 docker-compose run --rm app sh -c "python manage.py makemigrations api"
 docker-compose run --rm app sh -c "python manage.py migrate"
+docker-compose run --rm app sh -c "python manage.py createsuperuser"
 Add to settings.py:
     'rest_framework',
     'rest_framework.authtoken',
